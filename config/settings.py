@@ -170,7 +170,7 @@ EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST='smtp.gmail.com'
 EMAIL_PORT= '587'
 EMAIL_HOST_USER= 'logicore287@gmail.com'
-EMAIL_HOST_PASSWORD= ''
+EMAIL_HOST_PASSWORD= 'ogfx slmx eenx zczn'
 EMAIL_USE_TLS='True'
 
 # 
@@ -190,7 +190,7 @@ REST_FRAMEWORK = {
 # 
 SPECTACULAR_SETTINGS = {
     'TITLE': 'LogiCore API',
-    'DESCRIPTION': '...',
+    'DESCRIPTION': 'The LogiCore API empowers developers to seamlessly integrate logistics functionality into their own systems and applications. Designed for scalability and flexibility, our RESTful API provides secure access to all major modules of the LogiCore platform — including Orders, Shipments, Fleet, Warehouses, Drivers, Customers, Invoicing, and more.',
     'VERSION': '1.0.0',
     'SERVE_INCLUDE_SCHEMA': False,
     'SCHEMA_PATH_PREFIX': '/api',
@@ -205,4 +205,7 @@ SPECTACULAR_SETTINGS = {
     },
     'SORT_OPERATIONS': False,
     'SORT_SCHEMA_COMPONENTS': True,
-    'SERVE_AUTHENTICATION
+    'SERVE_AUTHENTICATION': ['rest_framework.authentication.BasicAuthentication', 'rest_framework.authentication.SessionAuthentication'],
+    'SERVE_PERMISSIONS': ['rest_framework.permissions.AllowAny'],
+    'ENABLE_FILE_UPLOADS': True,
+}
