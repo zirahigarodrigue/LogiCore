@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  {% load static %}
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <!-- Favicons -->
+    <link href="{% static 'img/favicon.png' %}" rel="icon" />
+    <title>LogiCore - Backend API</title>
+    
+    <!-- Main Stylesheet File -->
+    <link href="{% static 'css/style.css' %}" rel="stylesheet" />
+  </head>
+
+  <body>
+    <header id="header">
+      <div class="container">
+        <div class="logo float-left">
+          <h2>
+            <a href="{% url 'home' %}">
+              <span>LogiCore</span>
+            </a>
+          </h2>
+        </div>
+
+        <nav class="main-nav float-right d-none d-lg-block">
+          <ul>
+            <li>
+              <a href="admin/" class="btn btn-light"> Login </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Intro Section -->
+    <section id="intro" class="clearfix">
+      <div class="container d-flex h-100">
+        <div class="row justify-content-start align-self-center">
+          <div class="col-lg-7 intro-info order-md-first order-last">
+            <h2 class="h4">LogiCore</h2>
+            <p class="text-light h5">
+              ...
+            </p>
+            <div>
+              <a
+                href="{% url 'swagger-ui' %}"
+                class="btn btn-info text-light btn-md"
+              >
+                <span> API with Swagger-UI </span>
+              </a>
+              <a
+                href="{% url 'redoc' %}"
+                class="btn btn-secondary text-light btn-md"
+              >
+                <span> API with Redoc </span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer" class="section-bg bg-dark">
+      <div class="container">
+        <div class="copyright text-light">
+          &copy;2025 <strong>LogiCore.</strong>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Template Main Javascript File -->
+    <script src="{% static 'js/main.js' %}"></script>
+  </body>
+</html>
