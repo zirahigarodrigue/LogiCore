@@ -118,10 +118,7 @@ class UserPasswordResetView(generics.GenericAPIView):
                 uidb64 = urlsafe_base64_encode(force_bytes(user.pk))
                     
                 # Construct password-reset URL
-                if user.role == 'client':
-                    password_reset_url = f"{settings.FRONTEND_PUBLIC_URL}/client/password_reset/confirm/{uidb64}/{token}/"
-                else:
-                    password_reset_url = f"{settings.FRONTEND_STAFF_URL}/cooperative/password_reset/confirm/{uidb64}/{token}/"
+                password_reset_url = f"{settings.FRONTEND_PUBLIC_URL}/client/password_reset/confirm/{uidb64}/{token}/"
 
                 # Send email with password reset link
                 try:
